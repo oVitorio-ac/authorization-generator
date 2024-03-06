@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://www.reportlab.com/pypi/"
+verify_ssl = true
+name = "wwwreportlab"
+
+[packages]
+python-dotenv = "*"
+flask = "*"
+reportlab = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

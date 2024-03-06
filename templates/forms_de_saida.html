@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Autorização</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Formulário de Autorização - Etapa <span id="etapa_atual">1</span>/3
+                    </div>
+                    <div class="card-body">
+                        <form id="formulario_autorizacao" method="post" action="/processar_formulario_saida">
+                            <div id="etapa1">
+                                <div class="form-group">
+                                    <label for="nome_responsavel">Nome do Responsável Legal</label>
+                                    <input type="text" class="form-control" id="nome_responsavel"
+                                        name="nome_responsavel" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpf_responsavel">CPF do Responsável</label>
+                                    <input type="text" class="form-control" id="cpf_responsavel" name="cpf_responsave"
+                                        maxlength="14" required>
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="rg_responsavel">RG do Responsável</label>
+                                    <input type="text" class="form-control" id="rg_responsavel" name="rg_responsavel"
+                                        maxlength="12" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email_responsavel">E-mail do Responsável</label>
+                                    <input type="email" class="form-control" id="email_responsavel"
+                                        name="email_responsavel" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone_responsavel">Telefone do Responsável</label>
+                                    <input type="tel" class="form-control" id="telefone_responsavel"
+                                        name="telefone_responsavel" required>
+                                </div>
+                            </div>
+                            <div id="etapa2" style="display: none;">
+                                <div class="form-group">
+                                    <label for="rua_responsavel">Rua</label>
+                                    <input type="text" class="form-control" id="rua_responsavel" name="rua_responsavel"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="numero_responsavel">Número</label>
+                                    <input type="text" class="form-control" id="numero_responsavel"
+                                        name="numero_responsavel" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="complemento_responsavel">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento_responsavel"
+                                        name="complemento_responsavel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bairro_responsavel">Bairro</label>
+                                    <input type="text" class="form-control" id="bairro_responsavel"
+                                        name="bairro_responsavel" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cidade_responsavel">Cidade</label>
+                                    <input type="text" class="form-control" id="cidade_responsavel"
+                                        name="cidade_responsavel" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="estado_responsavel">Estado</label>
+                                    <select class="form-control" id="estado_responsavel" name="estado_responsavel">
+                                        <option value="">Selecione o estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="etapa3" style="display: none;">
+                                <div class="form-group">
+                                    <label for="nome_menor">Nome do Menor</label>
+                                    <input type="text" class="form-control" id="nome_menor" name="nome_menor" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rg_menor">RG do Menor</label>
+                                    <input type="text" class="form-control" id="rg_menor" name="rg_menor">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpf_menor">CPF do Menor</label>
+                                    <input type="text" class="form-control" id="cpf_menor" name="cpf_menor" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="proximo_etapa">Próxima Etapa</button>
+                            <button type="submit" class="btn btn-primary" id="enviar_formulario"
+                                style="display: none;">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de sucesso -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    altorização de saida gerada com sucesso
+                    cofere o email inserido no formulário  para receber a autorização
+
+                    voce pode fechar esta janela
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de erro -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Erro!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ocorreu um erro ao gerar a autorização de saida. Por favor, tente novamente mais tarde.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (opcional, apenas se precisar de funcionalidades JavaScript do Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/index.js"></script>
+
+
+</body>
+
+</html>
