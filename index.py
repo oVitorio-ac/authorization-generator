@@ -1,6 +1,6 @@
 import subprocess
 from flask import Flask, render_template, request , jsonify
-from backend.gen.criar_pdf import criar_autorizacao_passeio
+from backend.gen.criar_pdf import criar_autorizacao_desbravadores
 from backend.mailer.send_email import enviar_email
 
 
@@ -53,7 +53,7 @@ def processar_formulario_saida():
     'cpf_menor': dados['cpf_menor']
 }
     endereco = f"{dados_formatados['endereco_responsavel']['rua']}, numero: {dados_formatados['endereco_responsavel']['numero']} {dados_formatados['endereco_responsavel']['complemento']} - {dados_formatados['endereco_responsavel']['bairro']}, {dados_formatados['endereco_responsavel']['cidade']} - {dados_formatados['endereco_responsavel']['estado']}"
-    criar_autorizacao_passeio(dados_formatados['nome_responsavel'], dados_formatados['cpf_responsavel'], dados_formatados['rg_responsavel'],endereco, dados_formatados['telefone_responsavel'], dados_formatados['nome_menor'], dados_formatados['rg_menor'], dados_formatados['cpf_menor'])
+    pdf_buffer = criar_autorizacao_desbravadores(dados_formatados['nome_responsavel'], dados_formatados['cpf_responsavel'], dados_formatados['rg_responsavel'],endereco, dados_formatados['telefone_responsavel'], dados_formatados['nome_menor'], dados_formatados['rg_menor'], dados_formatados['cpf_menor'])
     corpo= f"""
     Prezado(a) {dados_formatados['nome_responsavel']},
 
@@ -88,8 +88,7 @@ Atenciosamente,
 
 secrtaria do alpha centauro
 """
-    enviar_email(dados_formatados['email_responsavel'], f'autorização de saida para o {dados_formatados["nome_menor"]}',corpo, 'pdf/autorizacao_passeio.pdf')
-    subprocess.run(['rm', 'pdf/autorizacao_passeio.pdf'])
+    enviar_email(dados_formatados['email_responsavel'], f'autorização de saida para o {dados_formatados["nome_menor"]}',corpo, pdf_buffer)
     return jsonify({"message": "authorização finalizada"})
 
 

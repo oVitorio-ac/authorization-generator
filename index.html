@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de PDF</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        function criarAutorizacaoDesbravadores() {
+            const dados = "Autorização de Saída para Clube de Desbravadores\n\n" + 
+                          "CLUBE DE DESBRAVADORES: Clube dos Desbravadores Aventureiros\n" +
+                          "RESPONSÁVEL PELO CLUBE: José Silva\n" +
+                          "RG do Responsável: 123456789\n" +
+                          "CPF do Responsável: 98765432100\n" +
+                          "Nome do Responsável: João da Silva\n" +
+                          "RG do Menor: 987654321\n" +
+                          "CPF do Menor: 12345678900\n" +
+                          "Endereço do Responsável: Rua das Flores, 123\n" +
+                          "Telefone do Responsável: (11) 91234-5678\n" +
+                          "Nome do Menor: Maria da Silva\n" +
+                          "Evento: Acampamento de Aventuras\n" +
+                          "Data de Início: 01/04/2024\n" +
+                          "Data de Fim: 03/04/2024\n" +
+                          "Local: Parque Estadual da Serra da Cantareira\n" +
+                          "Cidade de Origem: São Paulo\n" +
+                          "Cidade de Destino: Mairiporã\n" +
+                          "Assinatura do Responsável Legal: _________________\n" +
+                          "CPF do Responsável: ______________________________";
+
+            // Criar um novo documento PDF
+            const doc = new jsPDF();
+
+            // Adicionar texto ao PDF
+            doc.text(dados, 10, 10);
+
+            // Gerar uma string Base64 do PDF
+            const pdfBase64 = doc.output('datauristring');
+
+            // Criar um elemento de link para abrir o PDF em uma nova aba
+            const link = document.createElement('a');
+            link.href = pdfBase64;
+            link.download = 'autorizacao_desbravadores.pdf';
+
+            // Simular um clique no link para iniciar o download
+            link.click();
+        }
+    </script>
+
+    <button onclick="criarAutorizacaoDesbravadores()">Gerar PDF</button>
+</body>
+</html>

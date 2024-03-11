@@ -1,8 +1,8 @@
 import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
 from email import encoders
 from dotenv import load_dotenv
 
@@ -28,13 +28,11 @@ def enviar_email(destinatario, assunto, corpo, arquivo_anexo):
     # Adicionando o corpo do e-mail
     msg.attach(MIMEText(corpo, 'plain'))
 
-    # Adicionando o arquivo PDF como anexo
-    with open(arquivo_anexo, 'rb') as anexo:
-        part = MIMEBase('application', 'octet-stream')
-        part.set_payload(anexo.read())
-        encoders.encode_base64(part)
-        part.add_header('Content-Disposition', f'attachment; filename= {arquivo_anexo}')
-        msg.attach(part)
+    part = MIMEBase("application", "octet-stream")
+    part.set_payload(arquivo_anexo.getvalue())
+    encoders.encode_base64(part)
+    part.add_header("Content-Disposition", f"attachment; filename=autorizacao_desbravadores.pdf")
+    msg.attach(part)
 
     # Estabelecendo conexão com o servidor SMTP
     servidor = smtplib.SMTP(servidor_smtp, porta_smtp)
@@ -42,10 +40,11 @@ def enviar_email(destinatario, assunto, corpo, arquivo_anexo):
     servidor.login(REMETENTE, SENHA)
 
     # Enviando o e-mail
-    texto_email = msg.as_string()
-    servidor.sendmail(REMETENTE, destinatario, texto_email)
+    servidor.sendmail(REMETENTE, destinatario, msg.as_string())
 
     # Encerrando a conexão
     servidor.quit()
 
-
+# Exemplo de uso:
+# buffer = BytesIO(b'seu conteúdo em bytes')
+# enviar_email('destinatario@example.com', 'Assunto do Email', 'Corpo do Email', buffer, 'arquivo.pdf')
