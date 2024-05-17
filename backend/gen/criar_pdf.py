@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from io import BytesIO
 
@@ -5,8 +6,12 @@ from reportlab.lib import utils
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
-import os
-from dotenv import load_dotenv
+
+load_dotenv()
+
+RESPONSAVEL_CLUBE = str(os.environ.get("RESPONSAVEL_CLUBE"))
+RESPONSAVEL_CLUBE_CPF = str(os.environ.get("RESPONSAVEL_CLUBE_CPF"))
+
 
 
 def criar_autorizacao_desbravadores(
