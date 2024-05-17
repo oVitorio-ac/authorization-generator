@@ -14,6 +14,10 @@ flask = "*"
 reportlab = "*"
 
 [dev-packages]
+flake8 = "*"
+flake8-annotations = "*"
+isort = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"

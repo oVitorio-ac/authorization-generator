@@ -1,18 +1,20 @@
 import os
 import smtplib
+from email import encoders
+from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-REMETENTE = str(os.environ.get('REMETENTE'))
-SENHA = str(os.environ.get('SENHA'))
-SERVIDOR = str(os.environ.get('SERVIDOR'))
-porta = os.environ.get('PORTA')
+REMETENTE = str(os.environ.get("REMETENTE"))
+SENHA = str(os.environ.get("SENHA"))
+SERVIDOR = str(os.environ.get("SERVIDOR"))
+porta = os.environ.get("PORTA")
 PORTA = int(porta) if porta is not None else 587
+
 
 def enviar_email(destinatario, assunto, corpo, arquivo_anexo):
     # Configurações do servidor SMTP
@@ -21,17 +23,19 @@ def enviar_email(destinatario, assunto, corpo, arquivo_anexo):
 
     # Criando o objeto do e-mail
     msg = MIMEMultipart()
-    msg['From'] = REMETENTE
-    msg['To'] = destinatario
-    msg['Subject'] = assunto
+    msg["From"] = REMETENTE
+    msg["To"] = destinatario
+    msg["Subject"] = assunto
 
     # Adicionando o corpo do e-mail
-    msg.attach(MIMEText(corpo, 'plain'))
+    msg.attach(MIMEText(corpo, "plain"))
 
     part = MIMEBase("application", "octet-stream")
     part.set_payload(arquivo_anexo.getvalue())
     encoders.encode_base64(part)
-    part.add_header("Content-Disposition", f"attachment; filename=autorizacao_desbravadores.pdf")
+    part.add_header(
+        "Content-Disposition", f"attachment; filename=autorizacao_desbravadores.pdf"
+    )
     msg.attach(part)
 
     # Estabelecendo conexão com o servidor SMTP
@@ -44,6 +48,7 @@ def enviar_email(destinatario, assunto, corpo, arquivo_anexo):
 
     # Encerrando a conexão
     servidor.quit()
+
 
 # Exemplo de uso:
 # buffer = BytesIO(b'seu conteúdo em bytes')

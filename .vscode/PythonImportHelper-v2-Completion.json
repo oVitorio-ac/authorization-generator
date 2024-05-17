@@ -1,0 +1,305 @@
+[
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "importPath": "reportlab.lib",
+        "description": "reportlab.lib",
+        "isExtraImport": true,
+        "detail": "reportlab.lib",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "ParagraphStyle",
+        "importPath": "reportlab.lib.styles",
+        "description": "reportlab.lib.styles",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.styles",
+        "documentation": {}
+    },
+    {
+        "label": "getSampleStyleSheet",
+        "importPath": "reportlab.lib.styles",
+        "description": "reportlab.lib.styles",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.styles",
+        "documentation": {}
+    },
+    {
+        "label": "Paragraph",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleDocTemplate",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Spacer",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "encoders",
+        "importPath": "email",
+        "description": "email",
+        "isExtraImport": true,
+        "detail": "email",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEBase",
+        "importPath": "email.mime.base",
+        "description": "email.mime.base",
+        "isExtraImport": true,
+        "detail": "email.mime.base",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEMultipart",
+        "importPath": "email.mime.multipart",
+        "description": "email.mime.multipart",
+        "isExtraImport": true,
+        "detail": "email.mime.multipart",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "criar_autorizacao_desbravadores",
+        "importPath": "backend.gen.criar_pdf",
+        "description": "backend.gen.criar_pdf",
+        "isExtraImport": true,
+        "detail": "backend.gen.criar_pdf",
+        "documentation": {}
+    },
+    {
+        "label": "enviar_email",
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "isExtraImport": true,
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "criar_autorizacao_desbravadores",
+        "kind": 2,
+        "importPath": "backend.gen.criar_pdf",
+        "description": "backend.gen.criar_pdf",
+        "peekOfCode": "def criar_autorizacao_desbravadores(\n    nome_responsavel,\n    rg_responsavel,\n    cpf_responsavel,\n    endereco_responsavel,\n    telefone_responsavel,\n    nome_menor,\n    rg_menor,\n    cpf_menor,\n):",
+        "detail": "backend.gen.criar_pdf",
+        "documentation": {}
+    },
+    {
+        "label": "enviar_email",
+        "kind": 2,
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "peekOfCode": "def enviar_email(destinatario, assunto, corpo, arquivo_anexo):\n    # Configurações do servidor SMTP\n    servidor_smtp = SERVIDOR\n    porta_smtp = PORTA  # Porta SMTP para conexão segura\n    # Criando o objeto do e-mail\n    msg = MIMEMultipart()\n    msg[\"From\"] = REMETENTE\n    msg[\"To\"] = destinatario\n    msg[\"Subject\"] = assunto\n    # Adicionando o corpo do e-mail",
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "REMETENTE",
+        "kind": 5,
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "peekOfCode": "REMETENTE = str(os.environ.get(\"REMETENTE\"))\nSENHA = str(os.environ.get(\"SENHA\"))\nSERVIDOR = str(os.environ.get(\"SERVIDOR\"))\nporta = os.environ.get(\"PORTA\")\nPORTA = int(porta) if porta is not None else 587\ndef enviar_email(destinatario, assunto, corpo, arquivo_anexo):\n    # Configurações do servidor SMTP\n    servidor_smtp = SERVIDOR\n    porta_smtp = PORTA  # Porta SMTP para conexão segura\n    # Criando o objeto do e-mail",
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "SENHA",
+        "kind": 5,
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "peekOfCode": "SENHA = str(os.environ.get(\"SENHA\"))\nSERVIDOR = str(os.environ.get(\"SERVIDOR\"))\nporta = os.environ.get(\"PORTA\")\nPORTA = int(porta) if porta is not None else 587\ndef enviar_email(destinatario, assunto, corpo, arquivo_anexo):\n    # Configurações do servidor SMTP\n    servidor_smtp = SERVIDOR\n    porta_smtp = PORTA  # Porta SMTP para conexão segura\n    # Criando o objeto do e-mail\n    msg = MIMEMultipart()",
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "SERVIDOR",
+        "kind": 5,
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "peekOfCode": "SERVIDOR = str(os.environ.get(\"SERVIDOR\"))\nporta = os.environ.get(\"PORTA\")\nPORTA = int(porta) if porta is not None else 587\ndef enviar_email(destinatario, assunto, corpo, arquivo_anexo):\n    # Configurações do servidor SMTP\n    servidor_smtp = SERVIDOR\n    porta_smtp = PORTA  # Porta SMTP para conexão segura\n    # Criando o objeto do e-mail\n    msg = MIMEMultipart()\n    msg[\"From\"] = REMETENTE",
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "porta",
+        "kind": 5,
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "peekOfCode": "porta = os.environ.get(\"PORTA\")\nPORTA = int(porta) if porta is not None else 587\ndef enviar_email(destinatario, assunto, corpo, arquivo_anexo):\n    # Configurações do servidor SMTP\n    servidor_smtp = SERVIDOR\n    porta_smtp = PORTA  # Porta SMTP para conexão segura\n    # Criando o objeto do e-mail\n    msg = MIMEMultipart()\n    msg[\"From\"] = REMETENTE\n    msg[\"To\"] = destinatario",
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "PORTA",
+        "kind": 5,
+        "importPath": "backend.mailer.send_email",
+        "description": "backend.mailer.send_email",
+        "peekOfCode": "PORTA = int(porta) if porta is not None else 587\ndef enviar_email(destinatario, assunto, corpo, arquivo_anexo):\n    # Configurações do servidor SMTP\n    servidor_smtp = SERVIDOR\n    porta_smtp = PORTA  # Porta SMTP para conexão segura\n    # Criando o objeto do e-mail\n    msg = MIMEMultipart()\n    msg[\"From\"] = REMETENTE\n    msg[\"To\"] = destinatario\n    msg[\"Subject\"] = assunto",
+        "detail": "backend.mailer.send_email",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "def index():\n    return render_template(\"index.html\")\n@app.route(\"/autorizar_saida\", methods=[\"GET\", \"POST\"])\ndef autorizar_saida():\n    if request.method == \"POST\":\n        # Lógica para processar a autorização de saída aqui\n        # Redirecionar para a página inicial após o processamento\n        return render_template(\"forms_de_saida.html\")\n@app.route(\"/cadastrar_clube\", methods=[\"GET\", \"POST\"])\ndef cadastrar_clube():",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "autorizar_saida",
+        "kind": 2,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "def autorizar_saida():\n    if request.method == \"POST\":\n        # Lógica para processar a autorização de saída aqui\n        # Redirecionar para a página inicial após o processamento\n        return render_template(\"forms_de_saida.html\")\n@app.route(\"/cadastrar_clube\", methods=[\"GET\", \"POST\"])\ndef cadastrar_clube():\n    if request.method == \"POST\":\n        # Lógica para processar o formulário de cadastro aqui\n        # Redirecionar para a página inicial após o processamento do formulário",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "cadastrar_clube",
+        "kind": 2,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "def cadastrar_clube():\n    if request.method == \"POST\":\n        # Lógica para processar o formulário de cadastro aqui\n        # Redirecionar para a página inicial após o processamento do formulário\n        return render_template(\"forms_de_cadastro.html\")\n@app.route(\"/processar_formulario_saida\", methods=[\"POST\"])\ndef processar_formulario_saida():\n    dados = request.json\n    dados_formatados = {\n        \"nome_responsavel\": dados[\"nome_responsavel\"],",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "processar_formulario_saida",
+        "kind": 2,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "def processar_formulario_saida():\n    dados = request.json\n    dados_formatados = {\n        \"nome_responsavel\": dados[\"nome_responsavel\"],\n        \"cpf_responsavel\": dados[\"cpf_responsavel\"],\n        \"rg_responsavel\": dados[\"rg_responsavel\"],\n        \"telefone_responsavel\": dados[\"telefone_responsavel\"],\n        \"email_responsavel\": dados[\"email_responsavel\"],\n        \"endereco_responsavel\": {\n            \"rua\": dados[\"rua_responsavel\"],",
+        "detail": "index",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "app = Flask(__name__)\n@app.route(\"/\")\ndef index():\n    return render_template(\"index.html\")\n@app.route(\"/autorizar_saida\", methods=[\"GET\", \"POST\"])\ndef autorizar_saida():\n    if request.method == \"POST\":\n        # Lógica para processar a autorização de saída aqui\n        # Redirecionar para a página inicial após o processamento\n        return render_template(\"forms_de_saida.html\")",
+        "detail": "index",
+        "documentation": {}
+    }
+]
